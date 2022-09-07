@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource>
+    <string name="app_name">typroject</string>
+    <string name="facebook_app_id">1038454806829133</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">22115177a16a9e6008f85d86a96feb30</string>
+
+
+</resource>

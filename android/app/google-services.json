@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "436812253151",
+    "project_id": "typroject-e3112",
+    "storage_bucket": "typroject-e3112.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:436812253151:android:236fddffc6cc9aa0f8a66a",
+        "android_client_info": {
+          "package_name": "com.example.typroject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "436812253151-7ojrqkvpkro2pppukc6f0hsbsp7o1pmn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.typroject",
+            "certificate_hash": "8f62e9dbd125d66a5cac37c20cddb59f5ac66534"
+          }
+        },
+        {
+          "client_id": "436812253151-aldr22m1c9itb3vvnbkm2c78eqbfbg4p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkH-hgeknXmku49V_WP0J04zZ2iJOMqdw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "436812253151-aldr22m1c9itb3vvnbkm2c78eqbfbg4p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "436812253151-slqvjirgpput0402f7sstr1cvb8nsqk6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.typroject"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
