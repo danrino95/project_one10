@@ -93,7 +93,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               controller: passwordController,
                               textInputAction: TextInputAction.next,
                               decoration: const InputDecoration(
-                                  labelText: 'Enter Password'),
+                                  labelText: 'Enter Passssword'),
                               obscureText: true,
                               autovalidateMode:
                                   AutovalidateMode.onUserInteraction,
