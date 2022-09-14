@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 import 'package:typroject/Screens/email_verify.dart';
+import 'package:typroject/Screens/get_started.dart';
 import 'package:typroject/Screens/home_screen.dart';
 import 'package:typroject/Screens/phoneauth_screen.dart';
 import 'package:typroject/providers/internet_provider.dart';
@@ -264,6 +265,36 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     const SizedBox(
                       height: 20,
+                    ),
+                    RoundedLoadingButton(
+                      controller: phoneController,
+                      onPressed: () {
+                        nextScreenReplace(context, const getting_started());
+                      },
+                      successColor: Colors.black,
+                      color: Colors.black,
+                      width: MediaQuery.of(context).size.width * 0.80,
+                      elevation: 0,
+                      borderRadius: 25,
+                      child: Wrap(
+                        children: const [
+                          Icon(
+                            FontAwesomeIcons.phone,
+                            size: 20,
+                            color: Colors.white,
+                          ),
+                          SizedBox(
+                            width: 15,
+                          ),
+                          Text(
+                            "Getting Started",
+                            style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white),
+                          )
+                        ],
+                      ),
                     ),
                   ],
                 ),

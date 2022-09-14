@@ -305,6 +305,15 @@ class SignInProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  void phoneNumberUserSignin(User user) {
+    _name = "null";
+    _email = "null";
+    _imageUrl = "null";
+    _uid = user.phoneNumber;
+    _provider = "PHONE";
+    notifyListeners();
+  }
+
   void emailUser(User user, email, name, password) {
     _name = name;
     _email = email;

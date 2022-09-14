@@ -33,6 +33,11 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
+            CircleAvatar(
+              backgroundColor: Colors.white,
+              backgroundImage: NetworkImage("${sp.imageUrl}"),
+              radius: 50,
+            ),
             const SizedBox(
               height: 20,
             ),
@@ -87,6 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             ElevatedButton(
               onPressed: () {
+              
                 nextScreenReplace(context, const LoginScreen());
               },
               child: const Text(
