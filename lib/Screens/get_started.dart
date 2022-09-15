@@ -15,9 +15,7 @@ class _getting_startedState extends State<getting_started> {
   Widget build(BuildContext context) {
     final currentWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        body: responsiveLayout(
-            mobileBody: GettingStartedMobile(),
-            desktopBody: GettingStartedDesktop())
-    );
+        body: GettingStartedMobile());
+
   }
 }

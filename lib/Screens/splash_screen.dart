@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:typroject/Screens/get_started.dart';
 import 'package:typroject/Screens/home_screen.dart';
 import 'package:typroject/Screens/login_screen.dart';
 import 'package:typroject/providers/sign_in_provider.dart';
@@ -27,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
     Timer(const Duration(seconds: 2),(){
       sp.isSignedIn == false
-          ? nextScreen(context, const LoginScreen())
+          ? nextScreen(context, const getting_started())
           : nextScreen(context, const HomeScreen());
     });
   }
