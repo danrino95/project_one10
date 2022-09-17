@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:typroject/Screens/login_screen.dart';
+import 'package:typroject/Screens/get_started.dart';
 import 'package:typroject/providers/sign_in_provider.dart';
 import 'package:typroject/utils/next_screen.dart';
 
@@ -83,23 +83,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 } else {
                   sp.userSignOut();
                 }
-                nextScreenReplace(context, const LoginScreen());
+                nextScreenReplace(context, const getting_started());
               },
               child: const Text(
                 "SignOut",
                 style: const TextStyle(color: Colors.white),
               ),
             ),
-            ElevatedButton(
-              onPressed: () {
-              
-                nextScreenReplace(context, const LoginScreen());
-              },
-              child: const Text(
-                "SignOut",
-                style: const TextStyle(color: Colors.white),
-              ),
-            )
           ],
         ),
       ),

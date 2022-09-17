@@ -1,8 +1,6 @@
 import 'package:typroject/providers/internet_provider.dart';
 import 'package:typroject/providers/sign_in_provider.dart';
 import '../home_screen.dart';
-import '../login_screen.dart';
-import 'package:typroject/utils/config.dart';
 import 'package:typroject/utils/next_screen.dart';
 import 'package:typroject/utils/snack_bar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -33,7 +31,7 @@ class _PhoneRegistrationMobileState extends State<PhoneRegistrationMobile> {
             Padding(
               padding: EdgeInsets.only(bottom: 100),
               child: Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                     bottomRight: Radius.circular(300),
                   ),

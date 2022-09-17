@@ -4,11 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:typroject/Screens/get_started.dart';
 import 'package:typroject/Screens/home_screen.dart';
-import 'package:typroject/Screens/login_screen.dart';
 import 'package:typroject/providers/sign_in_provider.dart';
 
 import '../utils/config.dart';
-import 'package:provider/provider.dart';
 
 import '../utils/next_screen.dart';
 

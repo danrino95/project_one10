@@ -166,7 +166,6 @@ class SignInProvider extends ChangeNotifier {
   }
 
 // Twitter
-
   Future signInWithTwitter() async {
     final authResult = await twitterLogin.loginV2();
     if (authResult.status == TwitterLoginStatus.loggedIn) {

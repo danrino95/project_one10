@@ -4,17 +4,12 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 import 'package:typroject/Screens/email_verify.dart';
-import 'package:typroject/Screens/get_started.dart';
 import 'package:typroject/Screens/home_screen.dart';
-import 'package:typroject/Screens/phoneauth_screen.dart';
 import 'package:typroject/providers/internet_provider.dart';
 import 'package:typroject/providers/sign_in_provider.dart';
 import 'package:typroject/utils/config.dart';
 import 'package:typroject/utils/next_screen.dart';
 import 'package:typroject/utils/snack_bar.dart';
-import 'package:email_validator/email_validator.dart';
-
-import '../emailauth_screen.dart';
 
 class SocialSignInMobile extends StatefulWidget {
   const SocialSignInMobile({Key? key}) : super(key: key);
@@ -51,9 +46,9 @@ class _SocialSignInMobileState extends State<SocialSignInMobile> {
         child: Stack(
           children: [
             Padding(
-              padding: EdgeInsets.only(bottom: 100),
+              padding: const EdgeInsets.only(bottom: 100),
               child: Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                     bottomRight: Radius.circular(200),
                   ),
@@ -65,7 +60,7 @@ class _SocialSignInMobileState extends State<SocialSignInMobile> {
             ),
             Padding(
               padding:
-                  EdgeInsets.only(left: 20, top: 30, bottom: 30, right: 20),
+                  const EdgeInsets.only(left: 20, top: 30, bottom: 30, right: 20),
               child: Column(
                 children: [
                   Container(
@@ -91,8 +86,8 @@ class _SocialSignInMobileState extends State<SocialSignInMobile> {
                         ),
                         const SizedBox(
                           height: 30,
-                          child: const DecoratedBox(
-                            decoration: const BoxDecoration(color: Colors.red),
+                          child: DecoratedBox(
+                            decoration: BoxDecoration(color: Colors.red),
                           ),
                         ),
                         RoundedLoadingButton(
@@ -100,8 +95,8 @@ class _SocialSignInMobileState extends State<SocialSignInMobile> {
                           onPressed: () {
                             handleGoogleSignIn();
                           },
-                          successColor: Color.fromARGB(255, 138, 138, 138),
-                          color: Color.fromARGB(255, 117, 117, 117),
+                          successColor: const Color.fromARGB(255, 138, 138, 138),
+                          color: const Color.fromARGB(255, 117, 117, 117),
                           width: MediaQuery.of(context).size.width * 0.80,
                           elevation: 0,
                           borderRadius: 25,
@@ -357,3 +352,5 @@ class _SocialSignInMobileState extends State<SocialSignInMobile> {
     });
   }
 }
+
+
