@@ -96,7 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     setState(() => priceSort = !priceSort);
               },
               child: const Text(
-                "Sort By Price: High - Low",
+                "Sort By Price: High - Low & Low - High",
                 style: TextStyle(color: Colors.white),
               ),
             ),

@@ -58,7 +58,7 @@ class _DummyDataCrud extends State<DummyDataCrud> {
               onTap: () {
                 nextScreenReplace(context, const HomeScreen());
               },
-              child: Icon(Icons.logout)
+              child: Icon(Icons.home_filled)
           )
         ],
       ),
