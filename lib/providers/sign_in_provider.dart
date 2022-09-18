@@ -166,7 +166,6 @@ class SignInProvider extends ChangeNotifier {
   }
 
 // Twitter
-
   Future signInWithTwitter() async {
     final authResult = await twitterLogin.loginV2();
     if (authResult.status == TwitterLoginStatus.loggedIn) {
@@ -299,6 +298,15 @@ class SignInProvider extends ChangeNotifier {
   void phoneNumberUser(User user, email, name) {
     _name = name;
     _email = email;
+    _imageUrl = "null";
+    _uid = user.phoneNumber;
+    _provider = "PHONE";
+    notifyListeners();
+  }
+
+  void phoneNumberUserSignin(User user) {
+    _name = "null";
+    _email = "null";
     _imageUrl = "null";
     _uid = user.phoneNumber;
     _provider = "PHONE";

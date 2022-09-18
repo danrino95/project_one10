@@ -1,7 +1,6 @@
 import 'package:typroject/providers/internet_provider.dart';
 import 'package:typroject/providers/sign_in_provider.dart';
 import 'home_screen.dart';
-import 'login_screen.dart';
 import 'package:typroject/utils/config.dart';
 import 'package:typroject/utils/next_screen.dart';
 import 'package:typroject/utils/snack_bar.dart';
