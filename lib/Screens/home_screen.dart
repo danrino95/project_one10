@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:typroject/Screens/dummydata_crud_screen.dart';
+import 'package:typroject/Screens/get_started.dart';
 import 'package:typroject/Screens/login_screen.dart';
 import 'package:typroject/providers/sign_in_provider.dart';
 import 'package:typroject/read%20data/get_dummy_data.dart';
@@ -66,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
               } else {
                 sp.userSignOut();
               }
-              nextScreenReplace(context, const LoginScreen());
+              nextScreenReplace(context, const getting_started());
             },
               child: Icon(Icons.logout)
           )
