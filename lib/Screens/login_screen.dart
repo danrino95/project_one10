@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 import 'package:typroject/Screens/email_verify.dart';
+import 'package:typroject/Screens/forgot_password.dart';
 import 'package:typroject/Screens/home_screen.dart';
 import 'package:typroject/Screens/phoneauth_screen.dart';
 import 'package:typroject/providers/internet_provider.dart';
@@ -258,6 +259,41 @@ class _LoginScreenState extends State<LoginScreen> {
                                 fontSize: 15,
                                 fontWeight: FontWeight.w500,
                                 color: Colors.white),
+                          )
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+
+                    RoundedLoadingButton(
+                      controller: emailController,
+                      onPressed: () {
+                        nextScreenReplace(context, const ForgotPasswordScreen());
+                        emailController.reset();
+                      },
+                      successColor: Colors.black,
+                      color: Colors.black,
+                      width: MediaQuery.of(context).size.width * 0.80,
+                      elevation: 0,
+                      borderRadius: 25,
+                      child: Wrap(
+                        children: const [
+                          Icon(
+                            FontAwesomeIcons.mailBulk,
+                            size: 20,
+                            color: Colors.lightBlue,
+                          ),
+                          SizedBox(
+                            width: 15,
+                          ),
+                          Text(
+                            "Forgot Password?",
+                            style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.lightBlue),
                           )
                         ],
                       ),
