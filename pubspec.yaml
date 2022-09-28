@@ -45,6 +45,7 @@ dependencies:
   twitter_login: ^4.2.3
   flutter_signin_button: ^2.0.0
   custom_gradient_button: ^0.0.1
+  govt_documents_validator: ^0.0.1
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -89,3 +90,5 @@ flutter:
     #
     # For details regarding fonts from package dependencies,
     # see https://flutter.dev/custom-fonts/#from-packages
+flutter_intl:
+  enabled: true

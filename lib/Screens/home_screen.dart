@@ -36,8 +36,9 @@ class _HomeScreenState extends State<HomeScreen> {
     docIDs.clear();
     await FirebaseFirestore.instance
         .collection('dummyData')
-        .orderBy('price', descending: priceSort)
-        .where('category', )
+        .where('category', whereIn: ["IT", "Electronics"])
+        .orderBy('price', descending: true)
+        .limit(3)
         .get()
         .then(
           (snapshot) => snapshot.docs.forEach((element) {

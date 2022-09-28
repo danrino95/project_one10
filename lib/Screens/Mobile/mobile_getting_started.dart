@@ -1,5 +1,6 @@
 import 'package:custom_gradient_button/custom_gradient_button.dart';
 import 'package:flutter/material.dart';
+import 'package:typroject/Screens/Mobile/gov_auth.dart';
 import 'package:typroject/Screens/Mobile/mobile_email_phone_signin.dart';
 import 'package:typroject/Screens/Mobile/mobile_email_registration.dart';
 import 'package:typroject/Screens/Mobile/mobile_phone_registration.dart';
@@ -102,6 +103,18 @@ class _GettingStartedMobileState extends State<GettingStartedMobile> {
                 onPressed: () {
                   nextScreenReplace(
                       context, const PhoneRegistrationMobile());
+                },
+                child: Text("Phone"),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.black,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  nextScreenReplace(
+                      context, const gov_auth());
                 },
                 child: Text("Phone"),
                 style: ElevatedButton.styleFrom(
