@@ -16,6 +16,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  // TextEditingController _searchController = TextEditingController();
   Future getData() async {
     final sp = context.read<SignInProvider>();
     sp.getDataFromSP();
@@ -28,22 +29,56 @@ class _HomeScreenState extends State<HomeScreen> {
   //
   // }
 
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   _searchController.addListener(_onSearchChanged);
+  //
+  // }
+  
+  // _onSearchChanged(){
+  //   print(_searchController.text);
+  // }
+  //
+  // void dispose(){
+  //   _searchController.removeListener(_onSearchChanged);
+  //   _searchController.dispose();
+  //   super.dispose();
+  // }
+
+  String name = "";
+
   // document IDs
   List<String> docIDs = [];
 
   // get docIDs and store it in docID
   Future getDocId() async{
     docIDs.clear();
-    await FirebaseFirestore.instance
-        .collection('dummyData')
-        .orderBy('price', descending: priceSort)
-        .where('category', )
-        .get()
-        .then(
-          (snapshot) => snapshot.docs.forEach((element) {
+    if(name.isEmpty){
+      await FirebaseFirestore.instance
+          .collection('dummyData')
+          .where("category")
+          .orderBy('category')
+      // .orderBy("price", descending: priceSort)
+          .get()
+          .then(
+            (snapshot) => snapshot.docs.forEach((element) {
           docIDs.add(element.reference.id);
-      }),
-    );
+        }),
+      );
+    }else{
+      await FirebaseFirestore.instance
+          .collection('dummyData')
+          .where("category", isEqualTo: name)
+      // .orderBy("price", descending: priceSort)
+          .get()
+          .then(
+            (snapshot) => snapshot.docs.forEach((element) {
+          docIDs.add(element.reference.id);
+        }),
+      );
+    }
+
 
   }
 
@@ -61,6 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         actions: [
           GestureDetector(
+
             onTap: () {
               if ("${sp.provider}" == "EMAIL") {
                 sp.userEmailSignOut();
@@ -80,6 +116,17 @@ class _HomeScreenState extends State<HomeScreen> {
           children: <Widget>[
             const SizedBox(
               height: 10,
+            ),
+            TextField(
+              decoration: const InputDecoration(
+                prefixIcon: Icon(Icons.search),
+                hintText: 'Search......'
+              ),onChanged: (val){
+                setState(() {
+                  name = val;
+
+            });
+            },
             ),
 
             ElevatedButton(
