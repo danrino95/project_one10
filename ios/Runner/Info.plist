@@ -5,6 +5,10 @@
 <array>
   <dict>
   <key>CFBundleURLSchemes</key>
+  <key>NSLocationWhenInUseUsageDescription</key>
+  <string>The app needs the location</string>
+  <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+  <string>The app needs the location</string>
   <array>
     <string>1038454806829133</string>
 	<string>socialauth</string>
