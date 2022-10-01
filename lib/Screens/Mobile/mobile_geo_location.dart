@@ -1,6 +1,9 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:http/http.dart' as http;
 
 
 class GeoLocationMobile extends StatefulWidget {
@@ -56,19 +59,12 @@ class _GeoLocationMobileState extends State<GeoLocationMobile> {
   }
 
   _getAddressFromLatLng() async {
-    try {
-      List<Placemark> placemarks = await placemarkFromCoordinates(
-          _currentPosition!.latitude,
-          _currentPosition!.longitude
-      );
-
+      List<Placemark> placemarks = await placemarkFromCoordinates(52.2165157, 6.9437819);
+      print(placemarks);
       Placemark place = placemarks[0];
 
       setState(() {
         _currentAddress = "${place.locality}, ${place.postalCode}, ${place.country}";
       });
-    } catch (e) {
-      print(e);
     }
   }
-}
