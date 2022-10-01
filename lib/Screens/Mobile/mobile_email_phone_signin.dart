@@ -247,7 +247,7 @@ class _EmailPhoneSignInMobileState extends State<EmailPhoneSignInMobile> {
                                     shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(20)),
                                   ),
-                                  child: const Text("Register"))
+                                  child: const Text("Login1"))
                               ),
                             ),
                           ],
@@ -353,7 +353,7 @@ class _EmailPhoneSignInMobileState extends State<EmailPhoneSignInMobile> {
                                             shape: RoundedRectangleBorder(
                                                 borderRadius: BorderRadius.circular(20)),
                                           ),
-                                          child: const Text("Register"))
+                                          child: const Text("Login"))
                                       ),
                                     ),
 
