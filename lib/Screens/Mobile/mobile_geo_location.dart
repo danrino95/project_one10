@@ -59,12 +59,15 @@ class _GeoLocationMobileState extends State<GeoLocationMobile> {
   }
 
   _getAddressFromLatLng() async {
+    try {
       List<Placemark> placemarks = await placemarkFromCoordinates(52.2165157, 6.9437819);
-      print(placemarks);
       Placemark place = placemarks[0];
 
       setState(() {
         _currentAddress = "${place.locality}, ${place.postalCode}, ${place.country}";
       });
+    } catch (e) {
+      print(e);
     }
   }
+}
