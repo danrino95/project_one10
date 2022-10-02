@@ -2,6 +2,7 @@ import 'package:custom_gradient_button/custom_gradient_button.dart';
 import 'package:flutter/material.dart';
 import 'package:typroject/Screens/Mobile/mobile_email_phone_signin.dart';
 import 'package:typroject/Screens/Mobile/mobile_email_registration.dart';
+import 'package:typroject/Screens/Mobile/mobile_home.dart';
 import 'package:typroject/Screens/Mobile/mobile_phone_registration.dart';
 import 'package:typroject/Screens/Mobile/mobile_social_sign_in.dart';
 
@@ -19,6 +20,29 @@ class _GettingStartedMobileState extends State<GettingStartedMobile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+
+        actions: <Widget>[
+          TextButton(
+            onPressed: () {
+              nextScreenReplace(
+                  context, const HomePageMobile());
+            },
+            child: const Text('Action 1',style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+                fontSize: 10),),
+          ),
+          TextButton(
+            onPressed: () {
+              nextScreenReplace(
+                  context, const HomePageMobile());
+            },
+            child: const Text('Action 2'),
+          ),
+        ],
+
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
