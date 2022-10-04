@@ -5,6 +5,14 @@
 <array>
   <dict>
   <key>CFBundleURLSchemes</key>
+key>NSLocationWhenInUseUsageDescription</key>
+<string>This app needs access to location when open.</string>
+
+<key>NSLocationAlwaysUsageDescription</key>
+<string>This app needs access to location when in the background.</string>
+
+<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+<string>This app needs access to location when open and in the background.</string>
   <array>
     <string>1038454806829133</string>
 	<string>socialauth</string>

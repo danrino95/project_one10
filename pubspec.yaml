@@ -46,6 +46,13 @@ dependencies:
   flutter_signin_button: ^2.0.0
   custom_gradient_button: ^0.0.1
   govt_documents_validator: ^0.0.1
+  location: ^4.4.0
+  google_maps_flutter: ^2.0.6
+  geocoder: ^0.2.1
+  intl: ^0.17.0
+  geocoding: ^2.0.1
+  dio: ^4.0.6
+  geolocator: ^9.0.2
 
 dev_dependencies:
   flutter_lints: ^2.0.0
