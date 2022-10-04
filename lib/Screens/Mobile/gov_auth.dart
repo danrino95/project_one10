@@ -128,6 +128,6 @@ class _gov_authState extends State<gov_auth> {
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty<bool>('isAadharNum', isAadharNum));
+    properties.add(DiagnosticsProperty<bool>('isAadharNum',isAadharNum));
   }
 }
